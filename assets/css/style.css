@@ -1,0 +1,74 @@
+body{
+    background-image: url("../img/back.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#cercle-sign {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 40px;
+    background: lightgray;
+    display: block;
+    margin-left: 1vw;
+}
+#cercle-log {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 40px;
+    background: lightgray;
+    display: block;
+    position: absolute;
+    right: 0px;
+}
+.title{
+    text-align: center;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+}
+.display{
+    display: none !important;
+}
+.image-sign{
+    width: 5vw;
+}
+.logo-home{
+    width: 30vw;
+}
+.image-log{
+    width: 5vw;
+}
+.form-log{
+    right: -20vw;
+    position: relative;
+    display: inline;
+}
+.form-sign{
+    display: inline;
+    right: -20vw;
+    position: relative;
+}
+.display-log{
+    display: none;
+}
+.quest{
+    text-align: center;
+}
+.red{
+
+}
+.green{
+
+}
+.border{
+    border: solid 1px black;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: black;
+    text-decoration: none;
+}
