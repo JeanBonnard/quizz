@@ -8,7 +8,7 @@
 <?php
 
 try {
-    $result = $bdd->prepare('SELECT score as value,pseudo as name FROM users order by score desc limit 5');
+    $result = $bdd->prepare('SELECT score as value,pseudo as name FROM users order by `value` desc limit 5');
     $result->execute();
 
     $best_players = $result->fetchAll();
