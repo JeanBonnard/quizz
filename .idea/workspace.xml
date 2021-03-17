@@ -63,8 +63,16 @@
       <workItem from="1615820465748" duration="3637000" />
       <workItem from="1615839506993" duration="588000" />
       <workItem from="1615881566126" duration="21686000" />
-      <workItem from="1615965432518" duration="13909000" />
+      <workItem from="1615965432518" duration="14593000" />
     </task>
+    <task id="LOCAL-00001" summary="maj">
+      <created>1615984444927</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1615984444927</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -81,6 +89,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="maj" />
+    <option name="LAST_COMMIT_MESSAGE" value="maj" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
