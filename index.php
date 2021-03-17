@@ -2,6 +2,9 @@
 require_once 'process/php/pdo/db_connect.php';
 include 'view/header.php';
 ?>
+
+<!--__________________________________HEADER_______________________________________________-->
+
 <header>
     <h1 style="font-weight: bold; color: black" class="title">Méga-quizz 🤔</h1>
     <div class="row">
@@ -17,6 +20,7 @@ include 'view/header.php';
     <div class="row">
         <a href="#" id="cercle-sign"><img src="assets/img/sign.png" class="image-sign"></a>
         <a href="#" id="cercle-log"><img src="assets/img/log.png" class="image-log"></a>
+        <a href="view/top5.php" id="cercle-cour"><img src="assets/img/cour.png" class="image-cour"></a>
     </div>
     <div class="row">
         <div class="col-12 logo">
@@ -32,6 +36,11 @@ include 'view/header.php';
     }
     ?>
 </header>
+
+<!-----------------------------------CONTENT----------------------------------------->
+
+
+    <h1 id="countdown"></h1>
     <input type="hidden" id="id" name="id" value="<?=$_GET['id']?>">
     <input type="hidden" id="user" name="user" value="<?=$_GET['user']?>">
     <div class="quest display" id="quest">
@@ -40,10 +49,10 @@ include 'view/header.php';
         include 'process/php/view_questions.php';
 
         ?>
-
-
     </div>
-    <button class="btn btn-success" id="next">Next-></button>
+
+<!--________________________________GET SCORE______________________________________________-->
+
 <?php
 try {
     $result = $bdd->prepare('SELECT score FROM users WHERE id = ?');
@@ -52,15 +61,19 @@ try {
     $score_user = $result->fetch(PDO::FETCH_ASSOC);
 
     $score = $score_user['score'];
+    setcookie('cookieScore',$score);
+
 
 } catch (PDOException $err) {
-    echo 'echec prepare exec' . $err->getMessage();
+    echo 'echec prepare exec ' . $err->getMessage();
 }
 ?>
-
+<!--__________________________________DISPLAY SCORE_________________________________________________-->
 <?php
-echo "<label for='score'>score</label>
-<input disabled id='score' value='".$score."'>"
+echo "
+<label for='score'>score</label>
+<input disabled id='score' value='".$score."'>
+<button class='btn btn-success' id='next'>Next-></button>"
 ?>
 
 <?php

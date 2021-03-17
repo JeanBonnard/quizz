@@ -11,6 +11,14 @@ body{
     display: block;
     margin-left: 1vw;
 }
+#cercle-cour {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 40px;
+    background: lightgray;
+    display: block;
+    margin-left: 1vw;
+}
 #cercle-log {
     width: 5vw;
     height: 5vw;
@@ -31,6 +39,9 @@ body{
     display: none !important;
 }
 .image-sign{
+    width: 5vw;
+}
+.image-cour{
     width: 5vw;
 }
 .logo-home{
@@ -71,4 +82,12 @@ a{
 a:hover{
     color: black;
     text-decoration: none;
+}
+#countdown {
+    background-color: black;
+    color: #00FF7F;
+    position: relative;
+    text-align: center;
+    width: 8vw;
+    margin: auto;
 }

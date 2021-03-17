@@ -2,6 +2,7 @@
 try {
 
     require_once 'pdo/db_connect.php';
+
 $result1 = $bdd->prepare ('SELECT COUNT(*) FROM questions');
 $result1->execute();
 $count = $result1->fetch(PDO::FETCH_ASSOC);
@@ -12,21 +13,22 @@ $test->execute([$_GET['id']]);
 $user = $test->fetch(PDO::FETCH_ASSOC);
 
 if ($user['id_questions'] === ''){
-$update = $bdd->prepare ('UPDATE users SET id_questions = ? where id = ?');
-$update->execute([$random,$_GET['id']]);
+    $update = $bdd->prepare ('UPDATE users SET id_questions = ? where id = ?');
+    $update->execute([$random,$_GET['id']]);
 
 }else{
-$exp = explode('/',$user['id_questions']);
+    $exp = explode('/',$user['id_questions']);
 if( count($exp) != 10 ){
-while (in_array($random, $exp)){
-$random = rand(1,$count['COUNT(*)']);
-}
-$new_result = $user['id_questions'] ."/". $random;
-$update1 = $bdd->prepare ('UPDATE users SET id_questions = ? where id = ?');
-$update1->execute([$new_result,$_GET['id']]);
+    while (in_array($random, $exp)){
+        $random = rand(1,$count['COUNT(*)']);
+    }
+    $new_result = $user['id_questions'] ."/". $random;
+    $update1 = $bdd->prepare ('UPDATE users SET id_questions = ? where id = ?');
+    $update1->execute([$new_result,$_GET['id']]);
+
 
 }else{
-echo '<button class="btn btn-success">soumettre</button>';
+    echo '<button class="btn btn-success"><a href="process/php/insert_score.php?id='.$_GET['id'].'&user='.$_GET['user'].'">soumettre</a></button>';
 }
 
 }
@@ -60,8 +62,6 @@ echo '
 
 ';
 
-//echo 'tu as reussi';
-//header('location: /mega-quizz/index.php?id=' . $_GET['id'] . '&user=' . $_GET['user']);
 } catch (PDOException $err) {
 echo 'echec prepare exec' . $err->getMessage();
 
