@@ -4,32 +4,34 @@ body{
     background-repeat: no-repeat;
 }
 #cercle-sign {
-    width: 5vw;
-    height: 5vw;
+    width: 3.5vw;
+    height: 3.5vw;
     border-radius: 40px;
     background: lightgray;
     display: block;
     margin-left: 1vw;
 }
 #cercle-cour {
-    width: 5vw;
-    height: 5vw;
+    width: 3.5vw;
+    height: 3.5vw;
     border-radius: 40px;
     background: lightgray;
     display: block;
     margin-left: 1vw;
 }
 #cercle-log {
-    width: 5vw;
-    height: 5vw;
+    width: 3.5vw;
+    height: 3.5vw;
     border-radius: 40px;
     background: lightgray;
     display: block;
-    position: absolute;
-    right: 0px;
+    margin-left: 1vw;
 }
 .title{
     text-align: center;
+    display: block;
+    width: 19vw;
+    margin: auto;
 }
 .logo{
     display: flex;
@@ -39,16 +41,16 @@ body{
     display: none !important;
 }
 .image-sign{
-    width: 5vw;
+    width: 3.5vw;
 }
 .image-cour{
-    width: 5vw;
+    width: 3.5vw;
 }
 .logo-home{
     width: 30vw;
 }
 .image-log{
-    width: 5vw;
+    width: 3.5vw;
 }
 .form-log{
     right: -20vw;
@@ -84,10 +86,16 @@ a:hover{
     text-decoration: none;
 }
 #countdown {
-    background-color: black;
-    color: #00FF7F;
+    background-color: #4bb948;
+    color: white;
     position: relative;
     text-align: center;
     width: 8vw;
     margin: auto;
+    border-radius: 10px;
+}
+#ligne{
+    border: 0.15vw greenyellow solid;
+    margin-top: 1.5vw;
+    width: 14.3vw;
 }

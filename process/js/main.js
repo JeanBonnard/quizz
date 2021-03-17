@@ -10,6 +10,7 @@ let gdResp = document.querySelector('#gd-resp')
 let score = document.querySelector('#score')
 let next = document.querySelector('#next')
 let countDownText = document.getElementById("countdown");
+let scoreDiv = document.querySelector('#scoreDiv')
 
 let id = document.querySelector('#id').value
 let user = document.querySelector('#user').value
@@ -24,9 +25,7 @@ logIn.addEventListener('click',function (e){
 });
 com.addEventListener('click',function (e){
     quest.classList.toggle('display')
-
-
-
+    scoreDiv.classList.toggle('display')
     let count = 100;
 
     function timer () {
@@ -39,6 +38,9 @@ com.addEventListener('click',function (e){
     };
 
     setInterval(timer, 1000);
+
+
+
 });
 function btnEvent(){
     bdResp1.addEventListener('click', function (e){
@@ -85,7 +87,7 @@ function randomCard(){
 next.addEventListener('click',function (e){
         e.preventDefault()
 
-    setInterval(timer, 1000);
+
 
     fetch('/mega-quizz/process/php/view_questions.php?id='+id+'&user='+user,{
         method: 'post'

@@ -18,7 +18,7 @@ if ($user['id_questions'] === ''){
 
 }else{
     $exp = explode('/',$user['id_questions']);
-if( count($exp) != 20 ){
+if( count($exp) != 10 ){
     while (in_array($random, $exp)){
         $random = rand(1,$count['COUNT(*)']);
     }
@@ -28,7 +28,7 @@ if( count($exp) != 20 ){
 
 
 }else{
-    echo '<button class="btn btn-success"><a href="process/php/insert_score.php?id='.$_GET['id'].'&user='.$_GET['user'].'">soumettre</a></button>';
+    echo 'QUIZ TERMINE FELICITATION';
 
     $result2 = $bdd-> prepare('UPDATE users SET id_questions = ? where id = ?');
     $result2->execute(array('',$_GET['id']));

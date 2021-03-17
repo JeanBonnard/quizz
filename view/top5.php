@@ -13,7 +13,6 @@ try {
 
     $best_players = $result->fetchAll();
 
-
 } catch (PDOException $err) {
     echo 'echec prepare exec ' . $err->getMessage();
 }
@@ -27,9 +26,9 @@ try {
 <script type="text/javascript">
 
     let graphdef = {
-        categories : ['uvCharts'],
+        categories : ['Questionnaire Dèv'],
         dataset : {
-            'uvCharts' : <?=json_encode($best_players)?>
+            'Questionnaire Dèv' : <?=json_encode($best_players)?>
         }
     }
     let chart = uv.chart ('Bar', graphdef, {
