@@ -1,7 +1,10 @@
 body{
-    background-image: url("../img/back.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url("../img/ard.jpg");
+    background-size: 100vw 100vh;
+    width: 99vw;
+    /*background-repeat: no-repeat;*/
+    font-family:"pastel-crayon";
+    color: white !important;
 }
 #cercle-sign {
     width: 3.5vw;
@@ -30,8 +33,9 @@ body{
 .title{
     text-align: center;
     display: block;
-    width: 19vw;
+    /*width: 19vw;*/
     margin: auto;
+    font-size: 2.5vw;
 }
 .logo{
     display: flex;
@@ -74,9 +78,9 @@ body{
 .green{
 
 }
-.border{
+/*.border{
     border: solid 1px black;
-}
+}*/
 a{
     color: black;
     text-decoration: none;
@@ -86,16 +90,85 @@ a:hover{
     text-decoration: none;
 }
 #countdown {
-    background-color: #4bb948;
+    background-color: transparent;
     color: white;
-    position: relative;
+    position: absolute;
     text-align: center;
-    width: 8vw;
-    margin: auto;
+    width: 22vw;
+    margin-top: -2vw;
     border-radius: 10px;
+    font-size: 3vw;
 }
 #ligne{
     border: 0.15vw greenyellow solid;
-    margin-top: 1.5vw;
     width: 14.3vw;
+}
+.sous-titre{
+    margin-left: 1.35vw;
+    font-weight: bold;
+    display: block;
+    margin-bottom: -1vw;
+    font-size: 1.05vw;
+}
+
+@font-face {
+    font-family: "pastel-crayon";
+    src: url(pastel-crayon.ttf)format("truetype");
+}
+.uv-frame-bg{
+    fill: transparent !important;
+    font-family: pastel-crayon !important;
+}
+.uv-chart-bg{
+    fill: transparent !important;
+    font-family: pastel-crayon !important;
+}
+.tick {
+    stroke: white!important;
+    font-family: pastel-crayon !important;
+}
+.uv-hor-axis{
+    stroke: white!important;
+    font-family: pastel-crayon !important;
+}
+.uv-ver-axis{
+    stroke: white !important;
+    font-family: pastel-crayon !important;
+}
+.major{
+    stroke: white !important;
+    font-family: pastel-crayon !important;
+}
+line{
+    stroke: white!important;
+    font-family: pastel-crayon !important;
+}
+.uv-axes-label{
+    font-family: pastel-crayon !important;
+}
+.uv-legend-label{
+    stroke: white !important;
+    fill: white !important;
+    font-family: pastel-crayon !important;
+}
+.cr-questionnaire-d-v{
+    font-family: pastel-crayon !important;
+    fill: rgba(0,255,0,0.5) !important;
+}
+.uv-caption-text{
+    stroke: white!important;
+    font-family: pastel-crayon !important;
+}
+.question{
+    font-weight: bold;
+}
+.trait{
+    border: 1px white solid;
+    width: 60vw;
+    margin: auto;
+    font-family: pastel-crayon;
+}
+.school{
+    width: 18vw;
+    margin-top: 8vw;
 }

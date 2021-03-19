@@ -26,32 +26,36 @@ logIn.addEventListener('click',function (e){
 com.addEventListener('click',function (e){
     quest.classList.toggle('display')
     scoreDiv.classList.toggle('display')
-    let count = 100;
 
+    fetch('/mega-quizz/process/php/db_purge.php?id='+id+'&user='+user,{
+        method: 'get'
+    }).then(()=> {
+
+    })
+
+    let count = 100;
     function timer () {
         if(count > 0){
             countDownText.innerText = count;
             count--;
         } else if(count === 0){
-            countDownText.innerText = "Lift off!";
+            countDownText.innerText = "Fini";
         }
     };
 
     setInterval(timer, 1000);
 
-
-
 });
 function btnEvent(){
     bdResp1.addEventListener('click', function (e){
-        bdResp1.setAttribute('style','background-color: red')
-        bdResp2.setAttribute('style','background-color: red')
-        gdResp.setAttribute('style','background-color: green ')
+        bdResp1.setAttribute('style','background-color: rgba(255, 0, 0, 0.45); border: 1px white solid')
+        bdResp2.setAttribute('style','background-color: rgba(255, 0, 0, 0.45); border: 1px white solid')
+        gdResp.setAttribute('style','background-color: rgba(0, 255, 0, 0.45); border: 1px white solid ')
     })
     bdResp2.addEventListener('click', function (e){
-        bdResp1.setAttribute('style','background-color: red')
-        bdResp2.setAttribute('style','background-color: red')
-        gdResp.setAttribute('style','background-color: green')
+        bdResp1.setAttribute('style','background-color: rgba(255, 0, 0, 0.45); border: 1px white solid')
+        bdResp2.setAttribute('style','background-color: rgba(255, 0, 0, 0.45); border: 1px white solid')
+        gdResp.setAttribute('style','background-color: rgba(0, 255, 0, 0.45); border: 1px white solid')
     })
     gdResp.addEventListener('click', function (e){
         score.value ++
@@ -65,11 +69,9 @@ function btnEvent(){
         }).then(()=> {
 
         })
-
-        //score.innerHTML = score.value
-        bdResp1.setAttribute('style','background-color: red')
-        bdResp2.setAttribute('style','background-color: red')
-        gdResp.setAttribute('style','background-color: green')
+        bdResp1.setAttribute('style','background-color: rgba(255, 0, 0, 0.45); border: 1px white solid ')
+        bdResp2.setAttribute('style','background-color: rgba(255, 0, 0, 0.45); border: 1px white solid')
+        gdResp.setAttribute('style','background-color: rgba(0, 255, 0, 0.45); border: 1px white solid')
     })
 }
 function randomCard(){
@@ -102,24 +104,10 @@ next.addEventListener('click',function (e){
         bdResp2 = document.querySelector('#bd-resp-2')
         gdResp = document.querySelector('#gd-resp')
         btnEvent()
-        //console.log(score.value)
         randomCard()
 
     })
 })
 btnEvent()
 randomCard()
-
-
-
-
-
-/*let chartObject = uv.chart('Bar', graphdef)*/
-
-/*
-let graf = document.querySelector('#graf')
-console.log(chartObject)
-graf.innerHTML = chartObject*/
-
-/////////////////////////////////////________________COUNTDOWN___________________////////////////////////////
 

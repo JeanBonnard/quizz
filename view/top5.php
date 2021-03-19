@@ -2,9 +2,10 @@
     require_once '../process/php/pdo/db_connect.php';
     include 'header.php';
 ?>
-
-<div id="uv-div"></div>
-
+<div class="row">
+<div class="col-5">
+    <div id="uv-div"></div>
+</div>
 <?php
 
 try {
@@ -18,8 +19,11 @@ try {
 }
 
 ?>
-
-
+<div class="col-7">
+    <img class="school" src="../assets/img/school.png">
+    <img class="school" src="../assets/img/school2.png" alt="">
+</div>
+</div>
 <?php
     include 'footer.php';
 ?>
@@ -33,7 +37,7 @@ try {
     }
     let chart = uv.chart ('Bar', graphdef, {
         meta : {
-            caption : '[TOP 5] Players',
+            caption : '👑 [TOP 5] Players',
             //subcaption : 'among Imaginea OS products',
             hlabel : 'Nombre de points',
             vlabel : 'Meilleurs joueurs',
